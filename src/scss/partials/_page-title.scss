@@ -1,0 +1,66 @@
+main > h1 {
+  color: $color-3;
+
+  @include MQ(L) {
+    /* title goes into the header on big devices */
+    color: $color-5;
+  }
+}
+
+
+h1,
+h2 {
+  font-family: $secondary-font;
+  color: $color-4;
+}
+
+h1 {
+  font-size: 2.4rem;
+  font-weight: 300;
+  line-height: 1.2;
+  margin: 0 0 0.4em;
+
+  @include MQ(S) {
+    font-size: 3.2rem;
+  }
+
+  @include MQ(M) {
+    font-size: 4rem;
+  }
+}
+
+h2 {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 1em 0;
+
+  @include MQ(S) {
+    font-size: 1.8rem;
+    margin: 1em 0 1.4em;
+  }
+}
+
+section > h2::before {
+  /* number before each section title */
+  color: darken($color-3, 15%);
+}
+
+p {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  color: lighten($color-1, 15%);
+
+  a {
+    color: $color-1;
+    text-decoration: underline;
+  }
+
+  @include MQ(S) {
+    font-size: 1.6rem;
+    line-height: 1.6;
+  }
+}
+
+.cd-purpose div p:not(:first-child) {
+  margin: 20px;
+}
